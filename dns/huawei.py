@@ -51,6 +51,8 @@ class HuaWeiApi():
 
     def create_record(self, domain, sub_domain, value, record_type, line, ttl):
         request = CreateRecordSetWithLineRequest()
+        print(domain)
+        print(self.zone_id)
         request.zone_id = self.zone_id[domain + '.']
         if sub_domain == '@':
             name = domain + "."
